@@ -11,7 +11,7 @@ var googleSat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
 });
 
 // Camadas WMS
-var propriedades = L.tileLayer.wms('http://localhost:8080/geoserver/ne/wms', {
+var propriedades = L.tileLayer.wms('http://localhost:8080/geoserver/ne/wms?service=WMS&version=1.1.0&request=GetMap&layers=ne%3Apropriedades_rurais_1&bbox=-49.244842529296875%2C-25.038708482931646%2C-48.90301888784693%2C-24.83534927313428&width=768&height=456&srs=EPSG%3A4674&styles=&format=application/openlayers', {
   layers: 'ne:propriedades_rurais_1',
   format: 'image/png',
   transparent: true,
@@ -21,11 +21,11 @@ var propriedades = L.tileLayer.wms('http://localhost:8080/geoserver/ne/wms', {
 var desmatamento = L.tileLayer.wms('https://terrabrasilis.dpi.inpe.br/geoserver/prodes-mata-atlantica-nb/yearly_deforestation/ows', {
   layers: 'yearly_deforestation',
   format: 'image/png',
-  transparent: true,
+  transparent: true,http://localhost:8080/geoserver/ne/wms
   attribution: 'Yearly deforestation biome since 2004'
 });
 
-// Controle de camadas
+// Controle de camadashttp://localhost:8080/geoserver/ne/wms
 var baseMaps = {
   "OpenStreetMap": osm,
   "Google Satélite": googleSat
